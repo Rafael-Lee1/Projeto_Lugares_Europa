@@ -1,0 +1,57 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def lugares_turisticos_europa():
+    # Conteúdo da página
+    conteudo_pagina = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Lugares Turísticos na Europa</title>
+        <style>
+            /* CSS integrado */
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+            .card img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lugares Turisticos na Europa</h1>
+            <div class="card">
+                <img src="https://prefiroviajar.com.br/wp-content/uploads/2016/06/torre-eiffel-prefiro-viajar.jpg" alt="Lugar 1">
+                <h2>Paris</h2>
+                <p><p>Lorem ipsum dolor sit amet. Ad eveniet sapiente nam illo mollitia eum galisum fuga ut dignissimos velit cum tenetur laborum est molestiae velit! Ea consequatur placeat sed laborum omnis non saepe totam id odit doloribus eum repellat error. </p><p>Eos illum error et molestiae eligendi nam ratione iure hic delectus optio aut dicta consectetur qui labore eaque qui quasi impedit. Sit consequatur voluptas aut dolorum quaerat qui omnis voluptatum quo sunt ipsa sed omnis facere sit dignissimos corporis. Ut quos maiores qui cumque ipsa et laudantium dolorem. </p><p>Aut voluptas distinctio ex ratione rerum et corporis sint ab soluta voluptatem ut accusamus voluptatibus ea fugiat quam? Quo debitis veritatis qui aspernatur quia ut omnis sapiente vel culpa fugiat qui repudiandae inventore sed recusandae mollitia aut alias nisi? Et porro sunt vel tenetur autem est harum illum qui tempora vitae quo velit Quis! </p>
+</p>
+            </div>
+            <div class="card">
+                <img src="https://www.passagenspromo.com.br/blog/wp-content/uploads/2019/06/pontos-turisticos-de-roma-740x415.jpg" alt="Lugar 2">
+                <h2>Roma</h2>
+                <p>Lorem ipsum dolor sit amet. 33 temporibus enim et consectetur nostrum et reiciendis cupiditate sit exercitationem iure qui reprehenderit fuga est omnis velit. Aut voluptates amet id libero velit id culpa accusantium. Et voluptatem aperiam ut corrupti perferendis est facilis fugiat non nulla aliquam et deleniti beatae aut excepturi dolorem 33 ducimus fugit!</p>
+            </div>
+            <!-- Adicione mais cards para outros lugares turísticos -->
+        </div>
+    </body>
+    </html>
+    """
+    return conteudo_pagina
+
+if __name__ == '__main__':
+    app.run()
